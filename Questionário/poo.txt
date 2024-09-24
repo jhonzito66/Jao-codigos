@@ -1,0 +1,51 @@
+Perguntas:
+01-Qual é a função do método operacao() na classe A?
+
+02- O que acontece quando o método operacao() da classe B é chamado? Como o comportamento difere da classe A?
+
+03- Como o método operacao() na classe C usa os valores de getX() e getW() para exibir uma mensagem diferente?
+
+04- Qual o papel do construtor na classe B e como ele usa o construtor da classe A?
+
+05- Como o construtor da classe C utiliza o construtor da classe B? O que muda no comportamento da classe Cem relação à classe B?
+
+06- Explique o comportamento do polimorfismo no código quando chamamos o método operacao() de diferentes objetos (objA, objB, objC).
+
+07- Por que usamos getters e setters em vez de acessar diretamente os atributos x, w e m?
+
+08- O que acontece se alterarmos o valor de w no objeto objB usando o método setW()? Como isso afeta a saída do método operacao()?
+
+09- Quais modificações poderiam ser feitas para que o método operacao() na classe C exibisse apenas o valor de m sem usar getX() ou getW()?
+
+10- Se alterarmos o tipo de dado do atributo m na classe C para int, quais partes do código precisaríamos modificar?
+
+Respostas:
+01- O método operação() na classe imprime uma saída de texto escrita "Classe A:" e a variável do objeto, 
+no caso uma variável inteira denominada como "int x", com um modificador de acesso private;
+
+02- O método operação() da classe b sofre um override, ou seja, ele é modificado, fazendo com que a variável "int w", com um modificador de acesso private
+adicionada na classe b, fora do super, some com a variável y herdada no super a classe A, e imprimindo isso numa saída junto com um texto, ficando assim : 
+"Classe B: " e a soma das duas variáveis em seguida;
+
+03- É exibido uma mensagem diferente pois quando a variável é criada são setados valores diferentes, ela herda somente os getter e setters no super, não significa
+que ela herda os mesmos valores;
+
+04- O construtor na classe B define que a classe B herda o construtor, os setters e getters da classe A na variável y, chamando eles com o comando super dentro da classe com herança, 
+e adiciona uma nova variável int na classe B, chamada W;
+
+05- Assim como na classe B a classe C herda o construtor, os setters e getters da classe B, que puxa o construtor os setter e getters da classe A. A mudança de comportamento se dá nessa
+herança , que tem outra herança, ou seja, a classe C herda o construtor os setters e getters da classe B, nas variáveis y e z, variável y essa que na classe B não tem getters e setters,
+já que são herdados pelo super chamado dentro do construtor, que puxa os mesmos da classe A;
+
+06- O polimorfismo se dá pelo método, herdado de uma superclasse x, que se localiza em vários objetos diferentes com o mesmo nome, porém modificado com o override. Nesse exemplo temos
+o mesmo método localizado em 3 diferentes objetos, objA, objB, objC, neles o método operação(), é modificado adicionando varíaveis novas ou somando as já existentes;
+
+07- Usamos getters e setters para que ao criado um novo objeto, se crie uma nova variável dentro dele, com o getter pegando essa variável, e o setter definindo ela como a daquele objeto em si
+, se é utilizado isso para que ao criar um novo objeto as varíaveis não interfiram, ou seja separe uma variável nova para cada um, sem os setters e getters todos o novos objetos criados teriam a mesma variável.
+
+08- Quando alterado o valor de w no objeto b, a variável recebe um novo valor, fazendo com que no método operação() a saída se diferencie pois o valor de uma das varíaveis na soma foi alterada;
+
+09- No método operação serião retirados da saída os métodos getX(), e getW(), e o super herdado, fazendo com que a saída seja somente "Classe C:" + m;
+
+10- Os setters e Getters e o construtor;
+
